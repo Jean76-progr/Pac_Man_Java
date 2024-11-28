@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.13'
+}
+
+repositories {
+    mavenCentral()
+}
+
+javafx {
+    version = '17'
+    modules = ['javafx.controls', 'javafx.fxml', 'javafx.media']
+}
+
+application {
+    mainClass = 'ijae.xjanelj.PacmanGame'
+}
+
+// Ajouter cette configuration pour gérer les duplications
+tasks.withType(Copy) {
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
+}
+
+sourceSets {
+    main {
+        resources {
+            srcDirs = ['src/main/resources']
+        }
+    }
+}
+
+processResources {
+    from('src/main/resources') {
+        include '**/*.wav'
+    }
+}

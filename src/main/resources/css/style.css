@@ -1,0 +1,21 @@
+.game-root {
+    -fx-background-color: black;
+}
+
+.score-panel {
+    -fx-padding: 20px;
+    -fx-spacing: 10px;
+    -fx-background-color: #333333;
+    -fx-min-width: 150px;
+}
+
+.score-label, .level-label {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+}
+
+.score-value, .level-value {
+    -fx-text-fill: yellow;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
